@@ -37,6 +37,7 @@ namespace DistributedCacheRedis.Api.Controllers
 
             if (string.IsNullOrEmpty(cachedData))
             {
+                cachedData = await ApiCaller.GetPost();
                 await _distributedCache.SetStringAsync(_cacheKey, cachedData, _cacheOptions);
             }
             else
