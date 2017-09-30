@@ -37,6 +37,13 @@ namespace DistributedCacheRedis.Api
             // Add framework services.
             services.AddApplicationInsightsTelemetry(Configuration);
 
+            services.AddDistributedRedisCache(o =>
+            {
+                o.Configuration = "127.0.0.1:6379";
+            });
+
+            services.AddSession();
+
             services.AddMvc();
         }
 
