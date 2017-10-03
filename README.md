@@ -19,6 +19,7 @@ Using cache on app, you will improve the usage of external resources freeing thi
 
 ##### Distributed Cache
 
+Beside of basic cache that stores data at current servers memory, in distributed cache we share data to multiple servers and this cached data can be used to any app server that needs.
 
 
 ##### Why Redis
