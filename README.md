@@ -13,7 +13,7 @@ In plain words, cache is used when we want to client have access data that hardl
 
 It's main purpouse is to reduce the time to access data stored outside the app memory. Normally, just the first request to some outside store is executed and the next will consumethe cache DB. 
 
-This strategy improve the usage of external resources and app processing to get same data again and again.
+This strategy improves the usage of external resources and app processing to get same data again and again.
 
 ##### Distributed Cache
 
