@@ -4,18 +4,22 @@
 
 When an application consumes an external data base, its performance can be bottlenecked depending on business rules, middle tier application archtecture and the DB management system. Adding to it, you must check how much time and how big is the result sent to your cliente.
 
-You must take a look into your api respondes. Most of our web clients consume some informations that hardly change for every minutes. Looking into data size, change frequency and calls frequency, we must understand which API should be cached and for how long it should be.
+You must take a look into your api respondes. Most of our web clients consume some informations that hardly change for every minutes.
+
+Looking into data size, change frequency and calls frequency, we must understand which API should be cached and for how long it should be.
 
 
 #### Why To Cache Data
 
-In plain words, cache is used when we want to client have access data that hardly change, avoiding going through all business and archtecture.
+It's main purpouse is to reduce the time to access data stored outside the app memory. Normally, just the first request process all the business pipeline and go to some outside store to retrieve data, the next calls will consume same data from a cache DB. 
 
-It's main purpouse is to reduce the time to access data stored outside the app memory. Normally, just the first request to some outside store is executed and the next will consumethe cache DB. 
+Using cache on app, you will improve the usage of external resources freeing this resources to other user/process. 
 
-This strategy improves the usage of external resources and app processing to get same data again and again.
+> In plain words, cache is used when we want to have access to data that hardly change, avoiding going through all business and archtecture.
 
 ##### Distributed Cache
+
+
 
 ##### Why Redis
 
