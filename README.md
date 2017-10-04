@@ -32,7 +32,7 @@ Check this video: https://www.youtube.com/watch?v=DYaFW5MhfG8
 ##### Package Dependency
 
 You will need to add thispackage to your project.
-https://www.nuget.org/packages/Microsoft.Extensions.Caching.Redis/
+[Microsoft.Extensions.Caching.Redis](https://www.nuget.org/packages/Microsoft.Extensions.Caching.Redis/)
 
 ##### API/Startup
 
