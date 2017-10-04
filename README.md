@@ -30,6 +30,19 @@ Check this video: https://www.youtube.com/watch?v=DYaFW5MhfG8
 
 ##### Creating .Net Core project
 
-##### Library
+You will need to add thispackage to your project.
+https://www.nuget.org/packages/Microsoft.Extensions.Caching.Redis/
+
+**API/Startup**
+
+At this point, you need to setup the Redis connection at ConfigureServices method on Startup.cs.
+
+```cs
+ services.AddDistributedRedisCache(o =>
+            {
+                o.Configuration = "127.0.0.1:6379";
+            });
+```
+> I set the default port for Redis connection.
 
 
