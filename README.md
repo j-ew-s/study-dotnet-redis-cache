@@ -46,4 +46,15 @@ At this point, you need to setup the Redis connection at ConfigureServices metho
 ```
 > I set the default port for Redis connection. Ypu may need to change it to your own connection.
 
+##### API/Controller/BlogPostsController.cs
+
+Here is the API that will have data cached.
+First step is to set the IDistributedCache interface at controller's constructor
+```cs
+private readonly IDistributedCache _distributedCache;
+public BlogPostsController(IDistributedCache distributedCache)
+{
+    _distributedCache = distributedCache;
+}
+```
 
