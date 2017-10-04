@@ -31,7 +31,7 @@ This tuto objective does not cover the Redis install. You can check how to insta
 
 ##### Package Dependency
 
-You will need to add thispackage to your project.
+You may need to add this package to your project.
 [Microsoft.Extensions.Caching.Redis](https://www.nuget.org/packages/Microsoft.Extensions.Caching.Redis/)
 
 ##### API/Startup
