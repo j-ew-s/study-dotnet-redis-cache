@@ -9,9 +9,9 @@ You must take a look into your api respondes. Most of our web clients consume so
 Looking into data size, change frequency and calls frequency, we must understand which API should be cached and for how long it should be.
 
 
-#### Why To Cache Data
+#### Caching Data
 
-It's main purpouse is to reduce the time to access data stored outside the app memory. Normally, just the first request process all the business pipeline and go to some outside store to retrieve data, the next calls will consume same data from a cache DB. 
+Cache's main purpouse is to reduce the time to access data stored outside the app memory. Normally, just the first request process all the business pipeline and go to some outside store to retrieve data, the next calls will consume same data from a cache DB. 
 
 Using cache on app, you will improve the usage of external resources freeing this resources to other user/process. 
 
@@ -21,16 +21,12 @@ Using cache on app, you will improve the usage of external resources freeing thi
 
 Beside of basic cache that stores data at current servers memory, in distributed cache we share data to multiple servers and this cached data can be used to any app server that needs.
 
+#### Project Overview
 
 ##### Why Redis
 
-#### How To
-
-##### Installing Redis
-
 > You can check how to install Redis from this tutoria on Youtube.
 Check this video: https://www.youtube.com/watch?v=DYaFW5MhfG8
-
 
 ##### Creating .Net Core project
 
