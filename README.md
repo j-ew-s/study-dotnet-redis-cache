@@ -2,11 +2,11 @@
 
 ### Intro
 
-When an application consumes an external data base, its performance can be bottlenecked depending on business rules, middle tier application archtecture and the DB management system. Adding to it, you must check how much time and how big is the result sent to your cliente.
+Make our App faster enough is a big deal today, and some approaches can help us to improve this time to response better.
 
-You must take a look into your api respondes. Most of our web clients consume some informations that hardly change for every minutes.
+Consuming data from an external DB somethimes can make the API response a little bit more expensive. In some cases the data you want to are trivial and it hardly changes. In some cases, the business rules, middle tier archtecture and DB can bottleneck your reseponse, and what should be a fast and easy get, take too long.
 
-Looking into data size, change frequency and calls frequency, we must understand which API should be cached and for how long it should be.
+When you face this kind of situation, you must take a look into your api responses, looking into data size, data change frequency and calls frequency. Depending on the sitation, cache this response is a good approache, taking in consideration, for how long this cache must be keeped. 
 
 
 ##### Caching Data
