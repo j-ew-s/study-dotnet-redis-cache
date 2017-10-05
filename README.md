@@ -49,6 +49,7 @@ At this point, you need to setup the Redis connection at ConfigureServices metho
 ##### API/Controller/BlogPostsController.cs
 
 Here is the API that will have data cached.
+
 First step is to set the IDistributedCache interface at controller's constructor
 ```cs
 private readonly IDistributedCache _distributedCache;
@@ -57,4 +58,35 @@ public BlogPostsController(IDistributedCache distributedCache)
     _distributedCache = distributedCache;
 }
 ```
+
+We will use cache on the HTTP verb Get
+
+```cs
+[HttpGet]
+ public async Task<string>  Get()
+{
+     var watch = System.Diagnostics.Stopwatch.StartNew();
+     var cachedData = await _distributedCache.GetStringAsync(_cacheKey);
+
+     if (string.IsNullOrEmpty(cachedData))
+     {
+         cachedData = await ApiCaller.GetPost();
+         await _distributedCache.SetStringAsync(_cacheKey, cachedData);
+     }
+     else
+     {
+         watch.Stop();
+         return "CACHED. You took " + watch.ElapsedMilliseconds + " Milliseconds to have your response. Post  : " + cachedData;
+     }
+     watch.Stop();
+     return "NO CACHED data. You took " + watch.ElapsedMilliseconds + " Milliseconds to have your response. The result from API (Post): " + cachedData
+ }
+```
+
+Note that I'll need an key to define our data on Redis. Lets add it to our Controller.
+
+```cs
+private readonly string _cacheKey = "BlogPost";
+```
+
 
