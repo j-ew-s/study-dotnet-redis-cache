@@ -44,7 +44,7 @@ At this point, you need to setup the Redis connection at ConfigureServices metho
                 o.Configuration = "127.0.0.1:6379";
             });
 ```
-> I set the default port for Redis connection. Ypu may need to change it to your own connection.
+> I set the default port for Redis connection. You may need to change it to your own connection.
 
 ##### API/Controller/BlogPostsController.cs
 
