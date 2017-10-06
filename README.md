@@ -83,10 +83,25 @@ We will use cache on the HTTP verb Get
  }
 ```
 
-Note that I'll need an key to define our data on Redis. Lets add it to our Controller.
+Note that I'll need a key to define our data on Redis. Lets add it to our Controller.
 
 ```cs
 private readonly string _cacheKey = "BlogPost";
 ```
 
+To control how much time you data will be cached, you should add just after _distributedCache variable declaration the following line:
 
+```cs
+ private readonly DistributedCacheEntryOptions _cacheOptions;
+```
+then set it on constructor to the appropriated value. This for this tutorial, I am setting it to 1 minute.
+```cs
+ _cacheOptions = new DistributedCacheEntryOptions()
+{
+    AbsoluteExpirationRelativeToNow = (DateTime.Now.AddMinutes(1) - DateTime.Now)
+};
+```
+... and then, add this option to SetStringAsync
+```cs
+  await _distributedCache.SetStringAsync(_cacheKey, cachedData, _cacheOptions);
+```
