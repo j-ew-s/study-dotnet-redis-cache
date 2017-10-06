@@ -105,3 +105,14 @@ then set it on constructor to the appropriated value. For this tutorial, I am se
 ```cs
   await _distributedCache.SetStringAsync(_cacheKey, cachedData, _cacheOptions);
 ```
+
+### Results
+
+You must run the project and go to : <localhost>/api/BlogPosts
+
+##### First call
+
+When you run it for the very first time or your cache time expired, you get this message : 
+> NO CACHED data. You took 3088 Milliseconds to have your response. The result from API (Post): ...
+
+Please, note that we are calling https://jsonplaceholder.typicode.com/posts to get our data. It is just to mock data, and you can check how long it took.
