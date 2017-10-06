@@ -110,9 +110,16 @@ then set it on constructor to the appropriated value. For this tutorial, I am se
 
 You must run the project and go to : <localhost>/api/BlogPosts
 
-##### First call
+##### First Call or Call After Expired Cache Time 
 
 When you run it for the very first time or your cache time expired, you get this message : 
 > NO CACHED data. You took 3088 Milliseconds to have your response. The result from API (Post): ...
 
 Please, note that we are calling https://jsonplaceholder.typicode.com/posts to get our data. It is just to mock data, and you can check how long it took.
+
+##### Other Calls
+
+When you call the BlogPosts again, you will receive a result like this: 
+> CACHED. You took 1 Milliseconds to have your response. Post  : ...
+
+Note that your reponse time is pettry much nicier. From 3088 to 1 Millisecond, i think it can improve your app :D
