@@ -94,14 +94,14 @@ To control how much time you data will be cached, you should add just after _dis
 ```cs
  private readonly DistributedCacheEntryOptions _cacheOptions;
 ```
-then set it on constructor to the appropriated value. For this tutorial, I am setting it to 1 minute.
+then set it on constructor to the appropriated value. For this tutorial, I am setting it to 1 minute :
 ```cs
  _cacheOptions = new DistributedCacheEntryOptions()
 {
     AbsoluteExpirationRelativeToNow = (DateTime.Now.AddMinutes(1) - DateTime.Now)
 };
 ```
-... and then, add this option to SetStringAsync
+... and then, add this option to SetStringAsync :
 ```cs
   await _distributedCache.SetStringAsync(_cacheKey, cachedData, _cacheOptions);
 ```
