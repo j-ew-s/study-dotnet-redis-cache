@@ -36,7 +36,7 @@ You may need to add this package to your project.
 
 ##### API/Startup
 
-At this point, you need to setup the Redis connection at ConfigureServices method on Startup.cs.
+At this point, you need to setup the Redis connection at ConfigureServices method on Startup.cs:
 
 ```cs
  services.AddDistributedRedisCache(o =>
@@ -50,7 +50,7 @@ At this point, you need to setup the Redis connection at ConfigureServices metho
 
 Here is the API that will have data cached.
 
-First step is to set the IDistributedCache interface at controller's constructor
+First step is to set the IDistributedCache interface at controller's constructor:
 ```cs
 private readonly IDistributedCache _distributedCache;
 public BlogPostsController(IDistributedCache distributedCache)
@@ -59,7 +59,7 @@ public BlogPostsController(IDistributedCache distributedCache)
 }
 ```
 
-We will use cache on the HTTP verb Get
+We will use cache on the HTTP verb Get:
 
 ```cs
 [HttpGet]
@@ -83,7 +83,7 @@ We will use cache on the HTTP verb Get
  }
 ```
 
-Note that I'll need a key to define our data on Redis. Lets add it to our Controller.
+Note that I'll need a key to define our data on Redis. Lets add it to our Controller:
 
 ```cs
 private readonly string _cacheKey = "BlogPost";
