@@ -23,8 +23,7 @@ Beside of basic cache that stores data at current servers memory, in distributed
 
 ##### Installing Redis
 
-This tuto objective does not cover the Redis install. [You can check how to install Redis from this tutoria on Youtube.]
-(https://www.youtube.com/watch?v=DYaFW5MhfG8)
+This tuto objective does not cover the Redis install. [You can check how to install Redis from this tutoria on Youtube.](https://www.youtube.com/watch?v=DYaFW5MhfG8)
 
 
 ### Project Overview
