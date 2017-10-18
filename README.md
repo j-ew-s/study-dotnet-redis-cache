@@ -121,4 +121,4 @@ Please, note that we are calling https://jsonplaceholder.typicode.com/posts to g
 When you call the BlogPosts again, you will receive a result like this: 
 > CACHED. You took 1 Milliseconds to have your response. Post  : ...
 
-Note that your reponse time is pettry much nicier. From 3088 to 1 Millisecond, I think using Cached data is something that can improve your app :D
+Note that your reponse time is pettry much nicer. From 3088 we jumped to 1 Millisecond. I think using cached data is something that can improve your app :D
