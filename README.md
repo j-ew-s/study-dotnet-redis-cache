@@ -88,7 +88,7 @@ Note that I'll need a key to define our data on Redis. Lets add it to our Contro
 private readonly string _cacheKey = "BlogPost";
 ```
 
-To control how much time you data will be cached, you should add just after _distributedCache variable declaration the following line:
+To control how much time data will be cached, you should add  _distributedCache variable declaration the following line:
 
 ```cs
  private readonly DistributedCacheEntryOptions _cacheOptions;
