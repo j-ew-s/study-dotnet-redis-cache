@@ -58,7 +58,7 @@ public BlogPostsController(IDistributedCache distributedCache)
 }
 ```
 
-We will use cache on the HTTP verb Get:
+We will goint to chage the HTTP verb Get:
 
 ```cs
 [HttpGet]
